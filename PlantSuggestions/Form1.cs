@@ -15,6 +15,7 @@ namespace PlantSuggestions
         public Form1()
         {
             InitializeComponent();
+            this.trkTemp.Scroll += new EventHandler(this.btnSuggest_Click);
         }
 
         private void trkTemp_Scroll(object sender, EventArgs e)

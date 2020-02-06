@@ -30,7 +30,6 @@
         {
             this.chkSthFacing = new System.Windows.Forms.CheckBox();
             this.trkTemp = new System.Windows.Forms.TrackBar();
-            this.btnSuggest = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lblTemp = new System.Windows.Forms.Label();
             this.lblSuggestion = new System.Windows.Forms.Label();
@@ -46,6 +45,7 @@
             this.chkSthFacing.TabIndex = 0;
             this.chkSthFacing.Text = "Do you have a south-facing window?";
             this.chkSthFacing.UseVisualStyleBackColor = true;
+            this.chkSthFacing.CheckedChanged += new System.EventHandler(this.btnSuggest_Click);
             // 
             // trkTemp
             // 
@@ -57,16 +57,6 @@
             this.trkTemp.TabIndex = 1;
             this.trkTemp.Value = 50;
             this.trkTemp.Scroll += new System.EventHandler(this.trkTemp_Scroll);
-            // 
-            // btnSuggest
-            // 
-            this.btnSuggest.Location = new System.Drawing.Point(73, 153);
-            this.btnSuggest.Name = "btnSuggest";
-            this.btnSuggest.Size = new System.Drawing.Size(75, 23);
-            this.btnSuggest.TabIndex = 2;
-            this.btnSuggest.Text = "Suggest";
-            this.btnSuggest.UseVisualStyleBackColor = true;
-            this.btnSuggest.Click += new System.EventHandler(this.btnSuggest_Click);
             // 
             // label1
             // 
@@ -88,23 +78,22 @@
             // 
             // lblSuggestion
             // 
-            this.lblSuggestion.AutoSize = true;
             this.lblSuggestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSuggestion.Location = new System.Drawing.Point(168, 158);
+            this.lblSuggestion.Location = new System.Drawing.Point(107, 150);
             this.lblSuggestion.Name = "lblSuggestion";
-            this.lblSuggestion.Size = new System.Drawing.Size(109, 13);
+            this.lblSuggestion.Size = new System.Drawing.Size(125, 18);
             this.lblSuggestion.TabIndex = 5;
             this.lblSuggestion.Text = "Plant suggestion here";
+            this.lblSuggestion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(373, 232);
+            this.ClientSize = new System.Drawing.Size(371, 217);
             this.Controls.Add(this.lblSuggestion);
             this.Controls.Add(this.lblTemp);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnSuggest);
             this.Controls.Add(this.trkTemp);
             this.Controls.Add(this.chkSthFacing);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
@@ -120,7 +109,6 @@
 
         private System.Windows.Forms.CheckBox chkSthFacing;
         private System.Windows.Forms.TrackBar trkTemp;
-        private System.Windows.Forms.Button btnSuggest;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblTemp;
         private System.Windows.Forms.Label lblSuggestion;
