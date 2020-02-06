@@ -12,10 +12,20 @@ namespace PlantSuggestions
 {
     public partial class Form1 : Form
     {
+        int MaxTemp = 90;
+        int MinTemp = 50;
+
+        // true if the applicable warning has been shown
+        bool MinTempWarningShown = false;
+        bool MaxTempWarningShown = false;
+
         public Form1()
         {
             InitializeComponent();
             this.trkTemp.Scroll += new EventHandler(this.HouseConditionsChanged);
+
+            this.trkTemp.Maximum = MaxTemp;
+            this.trkTemp.Minimum = MinTemp;
         }
 
         private void trkTemp_Scroll(object sender, EventArgs e)
@@ -27,6 +37,17 @@ namespace PlantSuggestions
         {
             int temp = trkTemp.Value;
             bool southFacing = chkSthFacing.Checked;
+
+            if (temp == MinTemp && !MinTempWarningShown)
+            {
+                MinTempWarningShown = true;
+                MessageBox.Show("Your home may be too cold for houseplants!", "Too Cold!");
+            }
+            else if (temp == MaxTemp && !MaxTempWarningShown)
+            {
+                MaxTempWarningShown = true;
+                MessageBox.Show("Your home may be too hot for houseplants!", "Too Hot!");
+            }
 
             string suggestion = GenerateSuggestion(temp, southFacing);
             lblSuggestion.Text = suggestion;
