@@ -62,14 +62,25 @@ namespace PlantSuggestions
 
         private void linkHousePlantInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            ShowWebPage(lblSuggestion.Text);
+            if (lblSuggestion.Text == "Plant suggestion here") // don't give an arguement to ShowWebPage if no suggestion has been made
+            {
+                ShowWebPage();
+            }
+            else
+            {
+                ShowWebPage(lblSuggestion.Text);
+            }
         }
 
-        private void ShowWebPage(string plantName)
+        private void ShowWebPage(string plantName = null)
         {
             string url = "https://houseplant411.com/";
 
-            url = url + "houseplant?hpq=" + plantName; // takes you to the search page for that plant on houseplant411.com
+            if (plantName != null)
+            {
+                url = url + "houseplant?hpq=" + plantName; // takes you to the search page for that plant on houseplant411.com
+            }
+
             System.Diagnostics.Process.Start(url);
         }
     }
