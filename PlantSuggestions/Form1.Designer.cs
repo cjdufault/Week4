@@ -45,7 +45,7 @@
             this.chkSthFacing.TabIndex = 0;
             this.chkSthFacing.Text = "Do you have a south-facing window?";
             this.chkSthFacing.UseVisualStyleBackColor = true;
-            this.chkSthFacing.CheckedChanged += new System.EventHandler(this.btnSuggest_Click);
+            this.chkSthFacing.CheckedChanged += new System.EventHandler(this.HouseConditionsChanged);
             // 
             // trkTemp
             // 

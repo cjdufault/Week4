@@ -15,7 +15,7 @@ namespace PlantSuggestions
         public Form1()
         {
             InitializeComponent();
-            this.trkTemp.Scroll += new EventHandler(this.btnSuggest_Click);
+            this.trkTemp.Scroll += new EventHandler(this.HouseConditionsChanged);
         }
 
         private void trkTemp_Scroll(object sender, EventArgs e)
@@ -23,7 +23,7 @@ namespace PlantSuggestions
             lblTemp.Text = trkTemp.Value + " °F";
         }
 
-        private void btnSuggest_Click(object sender, EventArgs e)
+        private void HouseConditionsChanged(object sender, EventArgs e) 
         {
             int temp = trkTemp.Value;
             bool southFacing = chkSthFacing.Checked;
