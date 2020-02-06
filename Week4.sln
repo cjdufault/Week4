@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlantSuggestions", "PlantSu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoatReservation", "BoatReservation\BoatReservation.csproj", "{680CCB11-E456-43C9-A88D-D2D066F09E11}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefAndOut", "RefAndOut\RefAndOut.csproj", "{C0404E26-F6BC-4462-B9CF-C7B81D43F14A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{680CCB11-E456-43C9-A88D-D2D066F09E11}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{680CCB11-E456-43C9-A88D-D2D066F09E11}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{680CCB11-E456-43C9-A88D-D2D066F09E11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0404E26-F6BC-4462-B9CF-C7B81D43F14A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0404E26-F6BC-4462-B9CF-C7B81D43F14A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0404E26-F6BC-4462-B9CF-C7B81D43F14A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0404E26-F6BC-4462-B9CF-C7B81D43F14A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
