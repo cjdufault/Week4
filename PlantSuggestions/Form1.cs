@@ -34,6 +34,7 @@ namespace PlantSuggestions
 
         private string GenerateSuggestion(int temp, bool southFacing)
         {
+            // determine the suggestion based on available sunlight and temperature
             if (southFacing)
             {
                 if (temp > 65)
@@ -57,6 +58,19 @@ namespace PlantSuggestions
                 }
             }
             
+        }
+
+        private void linkHousePlantInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ShowWebPage(lblSuggestion.Text);
+        }
+
+        private void ShowWebPage(string plantName)
+        {
+            string url = "https://houseplant411.com/";
+
+            url = url + "houseplant?hpq=" + plantName; // takes you to the search page for that plant on houseplant411.com
+            System.Diagnostics.Process.Start(url);
         }
     }
 }

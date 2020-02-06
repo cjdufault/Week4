@@ -33,6 +33,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblTemp = new System.Windows.Forms.Label();
             this.lblSuggestion = new System.Windows.Forms.Label();
+            this.linkHousePlantInfo = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.trkTemp)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,11 +87,24 @@
             this.lblSuggestion.Text = "Plant suggestion here";
             this.lblSuggestion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // linkHousePlantInfo
+            // 
+            this.linkHousePlantInfo.AutoSize = true;
+            this.linkHousePlantInfo.Location = new System.Drawing.Point(259, 195);
+            this.linkHousePlantInfo.Name = "linkHousePlantInfo";
+            this.linkHousePlantInfo.Size = new System.Drawing.Size(100, 13);
+            this.linkHousePlantInfo.TabIndex = 6;
+            this.linkHousePlantInfo.TabStop = true;
+            this.linkHousePlantInfo.Text = "houseplant411.com";
+            this.linkHousePlantInfo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.linkHousePlantInfo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkHousePlantInfo_LinkClicked);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(371, 217);
+            this.Controls.Add(this.linkHousePlantInfo);
             this.Controls.Add(this.lblSuggestion);
             this.Controls.Add(this.lblTemp);
             this.Controls.Add(this.label1);
@@ -112,6 +126,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblTemp;
         private System.Windows.Forms.Label lblSuggestion;
+        private System.Windows.Forms.LinkLabel linkHousePlantInfo;
     }
 }
 
