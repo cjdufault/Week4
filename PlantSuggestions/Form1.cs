@@ -12,8 +12,8 @@ namespace PlantSuggestions
 {
     public partial class Form1 : Form
     {
-        int MaxTemp = 90;
-        int MinTemp = 50;
+        readonly int MaxTemp = 90;
+        readonly int MinTemp = 50;
 
         // true if the applicable warning has been shown
         bool MinTempWarningShown = false;
